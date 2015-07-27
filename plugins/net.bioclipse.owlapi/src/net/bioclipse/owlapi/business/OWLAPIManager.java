@@ -227,11 +227,8 @@ public class OWLAPIManager implements IBioclipseManager {
         throws IOException, BioclipseException, CoreException {
 		IRI cIRI = IRI.create(classIRI);
 		OWLClass owlClass = ontology.getOWLOntologyManager().getOWLDataFactory().getOWLClass(cIRI);
-    	System.out.println("iri: " + cIRI);
-    	System.out.println("owlClass: " + owlClass);
 		Collection<OWLAnnotation> annos = EntitySearcher.getAnnotations(owlClass, ontology);
 	    for (OWLAnnotation annotation : annos) {
-	    	System.out.println("annotation: " + annotation.getProperty().getIRI());
         	if ("http://www.w3.org/2000/01/rdf-schema#label".equals(
         		annotation.getProperty().getIRI().toString())
             ) {
@@ -250,11 +247,8 @@ public class OWLAPIManager implements IBioclipseManager {
         throws IOException, BioclipseException, CoreException {
 		IRI cIRI = IRI.create(classIRI);
 		OWLClass owlClass = ontology.getOWLOntologyManager().getOWLDataFactory().getOWLClass(cIRI);
-    	System.out.println("iri: " + cIRI);
-    	System.out.println("owlClass: " + owlClass);
 		Collection<OWLAnnotation> annos = EntitySearcher.getAnnotations(owlClass, ontology);
 	    for (OWLAnnotation annotation : annos) {
-	    	System.out.println("annotation: " + annotation.getProperty().getIRI());
         	if ("http://purl.obolibrary.org/obo/IAO_0000115".equals(
         		annotation.getProperty().getIRI().toString())
             ) {

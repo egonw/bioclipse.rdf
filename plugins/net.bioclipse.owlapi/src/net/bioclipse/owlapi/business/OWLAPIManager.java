@@ -252,8 +252,12 @@ public class OWLAPIManager implements IBioclipseManager {
         	if ("http://purl.obolibrary.org/obo/IAO_0000115".equals(
         		annotation.getProperty().getIRI().toString())
             ) {
-        	  return ((OWLLiteral)annotation.getValue()).getLiteral();
-        	}
+        	    return ((OWLLiteral)annotation.getValue()).getLiteral();
+        	} else if ("http://purl.org/dc/elements/1.1/description".equals(
+            	annotation.getProperty().getIRI().toString())
+            ) {
+                return ((OWLLiteral)annotation.getValue()).getLiteral();
+            }
 		}
 		// recurse
 		for (OWLOntology importedOntology : ontology.getImports()) {

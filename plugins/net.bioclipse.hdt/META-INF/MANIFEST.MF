@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RDF HDT Support
+Bundle-SymbolicName: net.bioclipse.hdt;singleton:=true
+Bundle-Version: 2.6.2.qualifier
+Bundle-Activator: net.bioclipse.hdt.Activator
+Bundle-Vendor: Egon Willighagen
+Export-Package: net.bioclipse.hdt, net.bioclipse.hdt.business
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.bioclipse.core,
+ net.bioclipse.scripting,
+ org.springframework.bundle.spring.aop,
+ net.sf.cglib,
+ org.springframework.osgi.aopalliance.osgi,
+ net.bioclipse.rdf,
+ net.bioclipse.rdf.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.apache.log4j
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ lib/commons-codec-1.6.jar,
+ lib/commons-compress-1.6.jar,
+ lib/hamcrest-core-1.1.jar,
+ lib/hdt-api-1.1.1-SNAPSHOT.jar,
+ lib/hdt-java-cli-1.1.1-SNAPSHOT.jar,
+ lib/hdt-java-core-1.1.1-SNAPSHOT.jar,
+ lib/hdt-jena-1.1.1-SNAPSHOT.jar,
+ lib/httpclient-4.2.3.jar,
+ lib/httpcore-4.2.2.jar,
+ lib/jcl-over-slf4j-1.6.4.jar,
+ lib/jcommander-1.32.jar,
+ lib/jena-arq-2.11.0.jar,
+ lib/jena-core-2.11.0.jar,
+ lib/jena-iri-1.0.0.jar,
+ lib/junit-dep-4.8.2.jar,
+ lib/log4j-1.2.16.jar,
+ lib/slf4j-api-1.6.4.jar,
+ lib/slf4j-log4j12-1.6.4.jar,
+ lib/xercesImpl-2.11.0.jar,
+ lib/xml-apis-1.4.01.jar,
+ lib/xz-1.4.jar

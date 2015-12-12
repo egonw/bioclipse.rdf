@@ -15,7 +15,6 @@ import java.io.IOException;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.SubProgressMonitor;
 import org.rdfhdt.hdt.hdt.HDT;
 import org.rdfhdt.hdt.hdt.HDTManager;
 
@@ -71,5 +70,15 @@ public class HdtManager implements IBioclipseManager {
             qexec.close();
         }
         return table;
+    }
+
+    public long size(IHDTStore store) {
+    	if (!(store instanceof IHDTStore))
+    		throw new RuntimeException(
+    			"Can only handle IJenaStore's for now."
+    		);
+
+    	Model model = ((IHDTStore)store).getModel();
+    	return model.size();
     }
 }

@@ -42,4 +42,11 @@ public interface IHdtManager extends IBioclipseManager {
     )
     public IStringMatrix sparql(IHDTStore store, String queryString)
         throws IOException, BioclipseException, CoreException;
+	
+	@Recorded
+    @PublishedMethod(
+        params = "IHDTStore store",
+        methodSummary = "Returns the number of triples in the HDT store"
+    )
+	public long size(IHDTStore store);
 }
